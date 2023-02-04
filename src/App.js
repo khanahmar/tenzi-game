@@ -7,7 +7,15 @@ function App() {
   const [dice, setDice] = React.useState(allNewDice())
 
   function holdDice(id) {
-    console.log(id)
+    setDice((prevDice) => {
+      return prevDice.map((item) => {
+        if (item.id === id) {
+          return { ...item, isHeld: !item.isHeld }
+        } else {
+          return item
+        }
+      })
+    })
   }
 
   function allNewDice() {
@@ -15,15 +23,21 @@ function App() {
 
     for (let i = 0; i < 10; i++) {
       let num = Math.floor(Math.random() * 6 + 1)
-      numbersArray.push({ value: num, isHeld: true, id: nanoid() })
+      numbersArray.push({ value: num, isHeld: false, id: nanoid() })
     }
     return numbersArray
   }
 
   function rollDice() {
-    setDice(allNewDice())
+    setDice((oldDice) => {
+      oldDice.map((item) => {
+       if(item.isHeld===true){
+        
+       }
+        
+      })
+    })
   }
-  console.log(dice)
 
   const diceElement = dice.map((item) => {
     return (
@@ -37,7 +51,6 @@ function App() {
     )
   })
 
-  console.log(dice)
   return (
     <div className="App">
       <div className="die-container">{diceElement}</div>

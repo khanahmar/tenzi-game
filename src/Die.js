@@ -1,7 +1,6 @@
 import React from "react"
 
 export default function Die(props) {
-  console.log(props.id)
   return (
     <div>
       <div
