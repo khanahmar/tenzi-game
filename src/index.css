@@ -15,13 +15,14 @@ body {
 }
 
 .App {
-  background-color: rgb(218, 218, 218);
+  background-color: rgb(240, 240, 240);
   width: 700px;
   height: 700px;
   border-radius: 4px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
+  flex-direction: column;
 }
 
 .die-container {
@@ -39,8 +40,19 @@ body {
   width: 70px;
   height: 70px;
   border-radius: 10px;
-  background-color: white;
   box-shadow: 2px 5px 3px rgb(161, 161, 161);
   cursor: pointer;
   align-items: center;
+}
+
+.btn {
+  background-color: #5035ff;
+  color: white;
+  border: none;
+  font-size: 30px;
+  padding: 8px 60px;
+  letter-spacing: 1px;
+  margin-top: 20px;
+  border-radius: 6px;
+  cursor: pointer;
 }
