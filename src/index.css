@@ -21,7 +21,7 @@ body {
   border-radius: 4px;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
   flex-direction: column;
 }
 
@@ -55,4 +55,19 @@ body {
   margin-top: 20px;
   border-radius: 6px;
   cursor: pointer;
+}
+
+h1 {
+  font-size: 60px;
+}
+
+.para {
+  width: 400px;
+  color: gray;
+  font-size: 20px;
+  text-align: center;
+}
+
+.btn:active {
+  box-shadow: inset 4px 4px 8px black;
 }
